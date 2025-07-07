@@ -1,20 +1,19 @@
-name:ilk workflowumuz
-
+name: ilk workflowumuz
 
 on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]  
-  workflow dispatch:
-    
+    branches: [main]
+  workflow_dispatch:
+
 jobs:
-    deneme:
-        runs-on: ubuntu-latest
-        steps:
-            -name: Checkout
-            users: actions/checkout@v4
-            -name: Hello World
-             run:
-                echo "Hello World"
-                printenv
+  deneme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Hello World
+        run: |
+          echo "Hello World"
+          printenv
